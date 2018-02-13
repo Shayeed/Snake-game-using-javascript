@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snake game</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+	</head>
+
+	<!--On load of the body the function gameStart is activated-->
+	<body onload="gameStart();">
+		<!--Container div that centers everything-->
+		<div class="container">
+
+			<!--Heading div-->
+			<div id='heading'>
+				The Snake game
+			</div>
+
+			<!--Overlay div to be hidden when game is being played-->
+			<div id="overlay">
+				Your final score: <span id="finalScore"></span><br/>
+				<!--Link to reload the page by restarting the game-->
+				<a href="#" onclick="window.location.reload();">Click to play again</a> 
+			</div>
+
+			<!--The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.-->
+			<!--The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.-->
+			<!--A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.-->
+			<canvas id="canvas" width="600px" height="450px">
+				Sorry, this browser does not support canvas. Please update browser.<!--Default text when browser does not support canvas element-->
+			</canvas>
+
+			<!--Div to show the statistical details like score (Details will be filled by javascript)-->
+			<div id="statistics">
+				<div id="score"></div>	<!--Score area div-->
+				<div id="high_score"></div>	<!--High score area div-->
+				<!--Button to reset the high score-->
+				<button type="button" id="reset_score" onclick="reserHighScore();">Reset high score</button>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="scripts/script.js"></script>
+	</body>
+</html>
